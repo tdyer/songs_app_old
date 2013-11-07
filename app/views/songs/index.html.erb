@@ -1,0 +1,8 @@
+<h1>Listing songs</h1>
+
+<ul id='songs'>
+<% @songs.each do |song| %>
+  <li>Name: <%=song.name%>, Duration: <%= song.duration %>, Price: <%= song.price %> </li>
+<% end %>
+</ul>
+<%= link_to 'New Song', new_song_path, id: 'new_link'%>
