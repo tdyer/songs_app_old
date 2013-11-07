@@ -5,10 +5,9 @@ $(document).ready(function(){
   //   });
 
 
-	$('#new_link').click(function(event){
+$('#new_link').click(function(event){
 	// var url = $('#new_link').href
 	event.preventDefault();
-
 	$.ajax({
 		url: '/songs/new',
 		dataType: 'script',
@@ -16,8 +15,9 @@ $(document).ready(function(){
 			console.log(data);
 			alert(data);
 		}
-	});
+	})
 });
+
 
 // var sendForm = function(){
 // 	var formData = {};
