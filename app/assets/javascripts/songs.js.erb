@@ -1,0 +1,7 @@
+$(document).ready(function(){
+  alert("hey I'm in the songs.js file");
+ <% @songs && @songs.each do |song| %>
+   $('#songs').append("<li>" + <%= song.name %> + "</li>");
+ <% end %>
+});
+
