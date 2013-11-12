@@ -32,14 +32,26 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'echowrap'
 
-# Use unicorn as the app server
-# gem 'unicorn'
+gem 'dotenv-rails', :groups => [:development, :test]
 
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
+group :development do
+  gem 'pry'
+  gem 'pry-debugger'
+  gem 'pry-stack_explorer'
+  # Add model attributes 
+  gem 'annotate'
+  gem 'faker'
+  gem 'chronic'
+  # Turn off verbose logging of asset requests
+  gem 'quiet_assets'
+  # see Railscast for better_error gem
+  # http://railscasts.com/episodes/402-better-errors-railspanel
+  # FOR sublime text 3 MUST INSTALL sublime-url-protocol-mac, http://goo.gl/8KX1lb
+  # http://goo.gl/8KX1lb
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+end
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
